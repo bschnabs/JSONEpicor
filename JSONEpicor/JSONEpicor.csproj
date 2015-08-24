@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6794E61-DF5A-4861-919C-699DE181CD4A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JSONEpicor</RootNamespace>
+    <AssemblyName>JSONEpicor</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UD04\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UD100\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\UD04\JSONEpicor.UD04.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.GetaNewUD04Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.GetNewUD04AttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.GetNewUD04Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.UD04ListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.UD04Tableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\JSONEpicor.UD04.UpdExtUD04Tableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD04\UD04.wsdl" />
+    <None Include="Service References\UD04\UD04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD041.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD042.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD043.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD044.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD045.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD046.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD047.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD04\UD04SvcFacade.wsdl" />
+    <None Include="Service References\UD100\JSONEpicor.UD100.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetaNewUD100AResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetaNewUD100Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetNewUD100AAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetNewUD100AResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetNewUD100AttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetNewUD100Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.UD100ListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.UD100Tableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\JSONEpicor.UD100.UpdExtUD100Tableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UD100\UD100.wsdl" />
+    <None Include="Service References\UD100\UD100.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1001.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1002.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1003.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1004.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1005.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1006.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD1007.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UD100\UD100SvcFacade.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UD04\" />
+    <WCFMetadataStorage Include="Service References\UD100\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD04\UD04.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD04\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD04\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD04\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD100\UD100.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD100\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD100\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UD100\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3d8295c5-f809-4116-999a-819239c045a6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UD100.xsd" MetadataType="Schema" ID="a32752be-6c68-477f-8f7e-5e1e54140b6d" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd4" />
+    <MetadataFile FileName="UD1001.xsd" MetadataType="Schema" ID="f5e38ad5-cd16-4149-97b8-6920cb434600" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd3" />
+    <MetadataFile FileName="UD1002.xsd" MetadataType="Schema" ID="339d1248-aea6-41f3-b7e7-bc5337352df1" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd2" />
+    <MetadataFile FileName="UD1003.xsd" MetadataType="Schema" ID="1fdb1eed-9adb-4eac-9544-a07935a48ad7" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd1" />
+    <MetadataFile FileName="UD1004.xsd" MetadataType="Schema" ID="acf3d04d-9057-47de-be72-7da17f700674" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd0" />
+    <MetadataFile FileName="UD100.wsdl" MetadataType="Wsdl" ID="49dbbafd-d7d4-432d-b7a9-c8a68c9b8792" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="UD1005.xsd" MetadataType="Schema" ID="fd7424d6-a98a-41e0-92ee-1aa3f2389bf2" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd6" />
+    <MetadataFile FileName="UD1006.xsd" MetadataType="Schema" ID="b33dffc8-817b-4af0-93f7-24d7a54d7e27" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd5" />
+    <MetadataFile FileName="UD100.disco" MetadataType="Disco" ID="69d5bc62-a297-4f9e-8212-c223e30869c9" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?disco" />
+    <MetadataFile FileName="UD100SvcFacade.wsdl" MetadataType="Wsdl" ID="87dc20df-1b08-44fa-ba06-60a93367ce01" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?wsdl" />
+    <MetadataFile FileName="UD1007.xsd" MetadataType="Schema" ID="7fcc9924-4779-4182-91fa-c30a86310b9f" SourceId="1" SourceUrl="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

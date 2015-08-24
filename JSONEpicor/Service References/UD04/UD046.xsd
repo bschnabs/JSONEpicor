@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ice.Tablesets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ice.Tablesets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD04.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:complexType name="UD04Tableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Ice" base="q1:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UD04" nillable="true" type="tns:UD04Table" />
+          <xs:element minOccurs="0" name="UD04Attch" nillable="true" type="tns:UD04AttchTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UD04Tableset" nillable="true" type="tns:UD04Tableset" />
+  <xs:complexType name="UD04Table">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UD04Row" nillable="true" type="tns:UD04Row" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UD04Table" nillable="true" type="tns:UD04Table" />
+  <xs:complexType name="UD04Row">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Ice" base="q2:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Character01" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character02" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character03" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character04" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character05" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character06" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character07" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character08" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character09" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckBox01" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox02" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox03" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox04" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox05" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox06" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox07" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox08" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox09" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox10" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox11" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox12" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox13" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox14" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox15" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox16" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox17" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox18" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox19" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox20" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date01" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date02" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date03" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date04" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date05" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date06" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date07" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date08" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date09" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date10" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date11" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date12" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date13" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date14" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date15" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date16" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date17" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date18" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date19" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date20" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GlobalLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GlobalUD04" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Number01" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number02" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number03" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number04" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number05" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number06" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number07" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number08" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number09" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number10" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number11" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number13" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number14" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number15" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number16" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number17" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number18" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number19" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number20" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ShortChar01" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar02" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar03" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar04" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar05" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar06" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar07" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar08" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar09" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UD04Row" nillable="true" type="tns:UD04Row" />
+  <xs:complexType name="UD04AttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UD04AttchRow" nillable="true" type="tns:UD04AttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UD04AttchTable" nillable="true" type="tns:UD04AttchTable" />
+  <xs:complexType name="UD04AttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Ice" base="q3:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UD04AttchRow" nillable="true" type="tns:UD04AttchRow" />
+  <xs:complexType name="UD04ListTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Ice" base="q4:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UD04List" nillable="true" type="tns:UD04ListTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UD04ListTableset" nillable="true" type="tns:UD04ListTableset" />
+  <xs:complexType name="UD04ListTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UD04ListRow" nillable="true" type="tns:UD04ListRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UD04ListTable" nillable="true" type="tns:UD04ListTable" />
+  <xs:complexType name="UD04ListRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Ice" base="q5:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Character01" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character02" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character03" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character04" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character05" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character06" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character07" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character08" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character09" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Character10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckBox01" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox02" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox03" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox04" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox05" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox06" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox07" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox08" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox09" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox10" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox11" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox12" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox13" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox14" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox15" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox16" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox17" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox18" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox19" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckBox20" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date01" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date02" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date03" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date04" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date05" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date06" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date07" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date08" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date09" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date10" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date11" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date12" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date13" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date14" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date15" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date16" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date17" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date18" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date19" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Date20" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GlobalLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GlobalUD04" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Key1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Key5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Number01" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number02" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number03" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number04" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number05" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number06" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number07" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number08" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number09" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number10" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number11" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number13" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number14" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number15" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number16" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number17" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number18" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number19" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Number20" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ShortChar01" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar02" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar03" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar04" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar05" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar06" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar07" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar08" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar09" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortChar20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UD04ListRow" nillable="true" type="tns:UD04ListRow" />
+  <xs:complexType name="UpdExtUD04Tableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Ice" base="q6:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UD04" nillable="true" type="tns:UD04Table" />
+          <xs:element minOccurs="0" name="UD04Attch" nillable="true" type="tns:UD04AttchTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdExtUD04Tableset" nillable="true" type="tns:UpdExtUD04Tableset" />
+</xs:schema>

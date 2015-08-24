@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Ice:BO:UD100" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Ice:BO:UD100" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Ice:BO:UD100/Imports">
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd0" namespace="Ice:BO:UD100" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Ice.Common" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ice.Tablesets" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Epicor.Data" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd5" namespace="http://epicor.com/UserDefinedColumns" />
+      <xsd:import schemaLocation="http://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UD100SvcContract_GetNewUD100_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100Response" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q1:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100Attch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100Attch" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100Attch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100AttchResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100Attch_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q2:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100A_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100A" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100AResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100A_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q3:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100AAttch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100AAttch" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100AAttch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewUD100AAttchResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetNewUD100AAttch_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q4:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_DeleteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByID" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_DeleteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q5:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByID" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q6:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q7:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRows" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetRows_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q8:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetBySysRowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowID" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetBySysRowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q9:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetBySysRowIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDs" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetBySysRowIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q10:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_Update_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q11:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_UpdateExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExt" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_UpdateExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q12:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetaNewUD100_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetaNewUD100" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetaNewUD100_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetaNewUD100Response" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetaNewUD100_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q13:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetaNewUD100A_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetaNewUD100A" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetaNewUD100A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetaNewUD100AResponse" />
+  </wsdl:message>
+  <wsdl:message name="UD100SvcContract_GetaNewUD100A_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q14:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:portType name="UD100SvcContract">
+    <wsdl:operation name="GetNewUD100">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100" message="tns:UD100SvcContract_GetNewUD100_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100Response" message="tns:UD100SvcContract_GetNewUD100_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100EpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetNewUD100_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewUD100Attch">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100Attch" message="tns:UD100SvcContract_GetNewUD100Attch_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AttchResponse" message="tns:UD100SvcContract_GetNewUD100Attch_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AttchEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetNewUD100Attch_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewUD100A">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100A" message="tns:UD100SvcContract_GetNewUD100A_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AResponse" message="tns:UD100SvcContract_GetNewUD100A_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetNewUD100A_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewUD100AAttch">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AAttch" message="tns:UD100SvcContract_GetNewUD100AAttch_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AAttchResponse" message="tns:UD100SvcContract_GetNewUD100AAttch_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetNewUD100AAttchEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetNewUD100AAttch_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/DeleteByID" message="tns:UD100SvcContract_DeleteByID_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/DeleteByIDResponse" message="tns:UD100SvcContract_DeleteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/DeleteByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetByID" message="tns:UD100SvcContract_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetByIDResponse" message="tns:UD100SvcContract_GetByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetList" message="tns:UD100SvcContract_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetListResponse" message="tns:UD100SvcContract_GetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetRows" message="tns:UD100SvcContract_GetRows_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetRowsResponse" message="tns:UD100SvcContract_GetRows_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetRowsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetRows_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetBySysRowID" message="tns:UD100SvcContract_GetBySysRowID_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetBySysRowIDResponse" message="tns:UD100SvcContract_GetBySysRowID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetBySysRowIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetBySysRowIDs" message="tns:UD100SvcContract_GetBySysRowIDs_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetBySysRowIDsResponse" message="tns:UD100SvcContract_GetBySysRowIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetBySysRowIDsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/Update" message="tns:UD100SvcContract_Update_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/UpdateResponse" message="tns:UD100SvcContract_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/UpdateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_Update_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/UpdateExt" message="tns:UD100SvcContract_UpdateExt_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/UpdateExtResponse" message="tns:UD100SvcContract_UpdateExt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/UpdateExtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetaNewUD100">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetaNewUD100" message="tns:UD100SvcContract_GetaNewUD100_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetaNewUD100Response" message="tns:UD100SvcContract_GetaNewUD100_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetaNewUD100EpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetaNewUD100_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetaNewUD100A">
+      <wsdl:input wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetaNewUD100A" message="tns:UD100SvcContract_GetaNewUD100A_InputMessage" />
+      <wsdl:output wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetaNewUD100AResponse" message="tns:UD100SvcContract_GetaNewUD100A_OutputMessage" />
+      <wsdl:fault wsaw:Action="Ice:BO:UD100/UD100SvcContract/GetaNewUD100AEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:UD100SvcContract_GetaNewUD100A_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
