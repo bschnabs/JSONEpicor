@@ -32,8 +32,8 @@ namespace JSONEpicor
             }*/
 
             //attributes
-            //using (TextReader reader = File.OpenText(@"C:\Users\Bob\Documents\Visual Studio 2013\Projects\Kaufman SalesRFQ\Kaufman SalesRFQ\SalesRFQ.App\DataModel\Attribute.json"))
-            using (TextReader reader = File.OpenText(@"Attributes.json"))
+            using (TextReader reader = File.OpenText(@"C:\Users\Bob\Documents\Visual Studio 2013\Projects\Kaufman SalesRFQ\Kaufman SalesRFQ\SalesRFQ.App\DataModel\Attribute.json"))
+            //using (TextReader reader = File.OpenText(@"Attributes.json"))
             {
                 string readFile = reader.ReadToEnd();
                 dynamic json = JsonConvert.DeserializeObject(readFile);
@@ -75,13 +75,13 @@ namespace JSONEpicor
 
             binding.MaxReceivedMessageSize = 999999999;
 
-            EndpointAddress remoteAddress = new EndpointAddress("https://epicor/EpicorTest2/Ice/BO/UD100.svc");
-            //EndpointAddress remoteAddress = new EndpointAddress("https://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc");
+            //EndpointAddress remoteAddress = new EndpointAddress("https://epicor/EpicorTest2/Ice/BO/UD100.svc");
+            EndpointAddress remoteAddress = new EndpointAddress("https://dev-epicor10.saberlogicllc.local/ERP100700_RS/Ice/BO/UD100.svc");
             UD100SvcContractClient ud100 = new UD100SvcContractClient(binding, remoteAddress);
 
             ud100.ClientCredentials.UserName.UserName = "manager";
-            //ud100.ClientCredentials.UserName.Password = "manager";
-            ud100.ClientCredentials.UserName.Password = "Epicor2015";
+            ud100.ClientCredentials.UserName.Password = "manager";
+            //ud100.ClientCredentials.UserName.Password = "Epicor2015";
 
             return ud100;            
         }
@@ -117,7 +117,7 @@ namespace JSONEpicor
 
         private static void GetNewUD100(UD100SvcContractClient ud100, dynamic json)
         {
-            for(int x = 0; x < json.Count; x++)
+            for (int x = 0; x < json.Count; x++)
             {
                 UD100Tableset ud100DS = new UD100Tableset();
                 GetaNewUD100Request ud100Request = new GetaNewUD100Request(ud100DS);
@@ -125,17 +125,37 @@ namespace JSONEpicor
 
                 ud100Response.ds.UD100[0].Key1 = json[x]["ATTRIBUTE_ID"];
                 ud100Response.ds.UD100[0].Character01 = json[x]["ATTRIBUTE_DESCRIPTION"];
-                ud100Response.ds.UD100[0].ShortChar01 = (json[x]["SELECTION_MODE"] == null ? "" : json[x]["SELECTION_MODE"]);
-                ud100Response.ds.UD100[0].CheckBox01 = (json[x]["DISPLAY_IN_TITLE"] == null ? false : json[x]["DISPLAY_IN_TITLE"]);
-                ud100Response.ds.UD100[0].ShortChar02 = (json[x]["TITLE_PREFIX"] == null ? "" : json[x]["TITLE_PREFIX"]);
+                ud100Response.ds.UD100[0].ShortChar01 = (json[x]["SELECTION_MODE"] == null) ? "" : json[x]["SELECTION_MODE"];
+                ud100Response.ds.UD100[0].CheckBox01 = (json[x]["DISPLAY_IN_TITLE"] == null) ? false : json[x]["DISPLAY_IN_TITLE"];
+                ud100Response.ds.UD100[0].ShortChar02 = (json[x]["TITLE_PREFIX"] == null) ? "" : json[x]["TITLE_PREFIX"];
                 ud100Response.ds.UD100[0].Character02 = "";
-                ud100Response.ds.UD100[0].CheckBox02 = (json[x]["MANDATORY"] == null ? false : true);
+                ud100Response.ds.UD100[0].CheckBox02 = (json[x]["MANDATORY"] == null) ? false : true;
                 ud100Response.ds.UD100[0].CheckBox03 = true;
 
-                UD100.UpdateRequest ud100UpdateRequest = new UD100.UpdateRequest(ud100DS);
-                UD100.UpdateResponse ud100UpdateResponse = new UD100.UpdateResponse(ud100DS);
+                UD100.UpdateRequest ud100UpdateRequest = new UD100.UpdateRequest(ud100Response.ds);
+                UD100.UpdateResponse ud100UpdateResponse = new UD100.UpdateResponse(ud100Response.ds);
 
                 ud100UpdateResponse = ud100.UpdateAsync(ud100UpdateRequest).Result;
+
+                for (int y = 0; y < json[x]["ATTRIBUTE_VALUES"].Count; y++)
+                {
+                    GetaNewUD100ARequest ud100ARequest = new GetaNewUD100ARequest(ud100UpdateResponse.ds, json[x]["ATTRIBUTE_ID"].ToString(), "", "", "", "");
+                    GetaNewUD100AResponse ud100AResponse = ud100.GetaNewUD100AAsync(ud100ARequest).Result;
+
+                    ud100AResponse.ds.UD100A[0].ChildKey1 = json[x]["ATTRIBUTE_VALUES"][y]["ATTRIBUTE_VALUE"];
+                    ud100AResponse.ds.UD100A[0].ChildKey2 = json[x]["ATTRIBUTE_VALUES"][y]["ATTRIBUTE_VALUE_LABEL"];
+                    ud100AResponse.ds.UD100A[0].Character01 = json[x]["ATTRIBUTE_VALUES"][y]["ATTRIBUTE_VALUE_LABEL"];
+                    ud100AResponse.ds.UD100A[0].CheckBox01 = (json[x]["ATTRIBUTE_VALUES"][y]["EDITABLE"] == null) ? false : true;
+                    ud100AResponse.ds.UD100A[0].Number01 = (json[x]["ATTRIBUTE_VALUES"][y]["HEIGHT"] == null) ? 0 : json[x]["ATTRIBUTE_VALUES"][y]["HEIGHT"];
+                    ud100AResponse.ds.UD100A[0].Number02 = (json[x]["ATTRIBUTE_VALUES"][y]["WIDTH"] == null) ? 0 : json[x]["ATTRIBUTE_VALUES"][y]["WIDTH"];
+                    ud100AResponse.ds.UD100A[0].CheckBox02 = (json[x]["ATTRIBUTE_VALUES"][y]["IS_DEFAULT"] == null) ? false : true;
+                    ud100AResponse.ds.UD100A[0].Character02 = (json[x]["ATTRIBUTE_VALUES"][y]["ImagePath"] == null) ? "" : json[x]["ATTRIBUTE_VALUES"][y]["ImagePath"];
+
+                    UD100.UpdateRequest ud100AUpdateRequest = new UD100.UpdateRequest(ud100AResponse.ds);
+                    UD100.UpdateResponse ud100AUpdateResponse = new UD100.UpdateResponse(ud100AResponse.ds);
+
+                    ud100AUpdateResponse = ud100.UpdateAsync(ud100AUpdateRequest).Result;
+                }
 
                 /*
                 UD100.Key1 = Attribute ID
@@ -147,6 +167,15 @@ namespace JSONEpicor
                 UD100.CheckBox02 = Mandatory
                 UD100.CheckBox03 = Part
                 UD100.CheckBox04 = Quote
+
+                UD100A.ChildKey1 = Attribute Value
+                UD100A.Character01 = Label
+                UD100A.CheckBox01 = Editable
+                UD100A.Number01 = Height
+                UD100A.Number02 = Width
+                UD100A.CheckBox02 = Is Default
+                UD100A.Character02 = Image Path
+
                 */
             }
         }
